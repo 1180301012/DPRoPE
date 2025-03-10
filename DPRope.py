@@ -1,22 +1,13 @@
 import torch
 import torch.nn.functional as F
-import argparse
 from transformers.utils import logging
 
 logger = logging.get_logger(__name__)
 
-parser = argparse.ArgumentParser()
-parser.add_argument("--rope_theta", type=int, default=10000)
-parser.add_argument("--origin_max_position", type=int, default=4096)
-parser.add_argument("--head_dim", type=int, default=128)
-parser.add_argument("--scaling_factor", type=int, default=4)
-parser.add_argument("--target_max_position", type=int, default=None)
-parser.add_argument("--intervals", type=int, default=360)
-
-args = parser.parse_args()
 
 
-class DPRope:
+
+class DPRopeClass:
     def __init__(self, rope_theta: int=10000, origin_max_position: int=4096, head_dim: int=128, scaling_factor: int=4, target_max_position: int=None, intervals: int=360):
         self.rope_theta = rope_theta
         self.origin_max_position = origin_max_position
@@ -104,6 +95,6 @@ class DPRope:
 
 
 if __name__ == "__main__":
-    dp = DPRope()
+    dp = DPRopeClass()
     inv_freq, result_scaling_factors = dp.get_dprope_inv_freq()
     # replace your model's inv_freq or use result_scaling_factors for scaling RoPE.
