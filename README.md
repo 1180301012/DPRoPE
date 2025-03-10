@@ -51,27 +51,27 @@ class CustomDPRoPE(DPRoPEClass):
 
 ### Citation
 ```
-@inproceedings{DBLP:conf/acl/FeiNZH0D024,
-  author       = {Weizhi Fei and
-                  Xueyan Niu and
-                  Pingyi Zhou and
-                  Lu Hou and
-                  Bo Bai and
-                  Lei Deng and
-                  Wei Han},
-  editor       = {Lun{-}Wei Ku and
-                  Andre Martins and
-                  Vivek Srikumar},
-  title        = {Extending Context Window of Large Language Models via Semantic Compression},
-  booktitle    = {Findings of the Association for Computational Linguistics, {ACL} 2024,
-                  Bangkok, Thailand and virtual meeting, August 11-16, 2024},
-  pages        = {5169--5181},
-  publisher    = {Association for Computational Linguistics},
-  year         = {2024},
-  url          = {https://doi.org/10.18653/v1/2024.findings-acl.306},
-  doi          = {10.18653/V1/2024.FINDINGS-ACL.306},
-  timestamp    = {Tue, 08 Oct 2024 07:48:00 +0200},
-  biburl       = {https://dblp.org/rec/conf/acl/FeiNZH0D024.bib},
-  bibsource    = {dblp computer science bibliography, https://dblp.org}
+@inproceedings{wu-etal-2024-extending,
+    title = "Extending Context Window of Large Language Models from a Distributional Perspective",
+    author = "Wu, Yingsheng  and
+      Gu, Yuxuan  and
+      Feng, Xiaocheng  and
+      Zhong, Weihong  and
+      Xu, Dongliang  and
+      Yang, Qing  and
+      Liu, Hongtao  and
+      Qin, Bing",
+    editor = "Al-Onaizan, Yaser  and
+      Bansal, Mohit  and
+      Chen, Yun-Nung",
+    booktitle = "Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing",
+    month = nov,
+    year = "2024",
+    address = "Miami, Florida, USA",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2024.emnlp-main.414/",
+    doi = "10.18653/v1/2024.emnlp-main.414",
+    pages = "7288--7301",
+    abstract = "Scaling the rotary position embedding (RoPE) has become a common method for extending the context window of RoPE-based large language models (LLMs). However, existing scaling methods often rely on empirical approaches and lack a profound understanding of the internal distribution within RoPE, resulting in suboptimal performance in extending the context window length. In this paper, we propose to optimize the context window extending task from the view of rotary angle distribution. Specifically, we first estimate the distribution of the rotary angles within the model and analyze the extent to which length extension perturbs this distribution. Then, we present a novel extension strategy that minimizes the disturbance between rotary angle distributions to maintain consistency with the pre-training phase, enhancing the model`s capability to generalize to longer sequences. Experimental results compared to the strong baseline methods demonstrate that our approach reduces by up to 72{\%} of the distributional disturbance when extending LLaMA2`s context window to 8k, and reduces by up to 32{\%} when extending to 16k. On the LongBench-E benchmark, our method achieves an average improvement of up to 4.33{\%} over existing state-of-the-art methods. Furthermore, Our method maintains the model`s performance on the Hugging Face Open LLM benchmark after context window extension, with only an average performance fluctuation ranging from -0.12 to +0.22."
 }
 ```
