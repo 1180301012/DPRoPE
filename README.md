@@ -38,9 +38,9 @@ Below is an implementation example:
 from DPRoPE import DPRoPEClass
 
 
-def CustomDPRoPE(DPRoPEClass):
+class CustomDPRoPE(DPRoPEClass):
     def __init__(self):
-        spuer.__init__(self)
+        super().__init__()
         self.all_scaling_methods.append(self._custom_scaling_method)
     
     def _custom_scaling_method(self):
