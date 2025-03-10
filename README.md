@@ -31,7 +31,7 @@ if __name__ == "__main__":
     inv_freq, scaling_factors = dprope.get_dprope_inv_freq()
 ```
 
-By default, **DPRoPE** selects between **extrapolation** and **interpolation**. If you wish to incorporate additional methods, please implement a ```_custom_scaling_method``` and integrate it into ```all_scaling_methods```.Please refer to DRRoPE.py for further details and implementation.
+By default, **DPRoPE** selects between **extrapolation** and **interpolation**. If you wish to incorporate additional methods, please implement a ```_custom_scaling_method``` and integrate it into ```all_scaling_methods```.Please refer to ```DRRoPE.py``` for further details and implementation.
 
 Below is an implementation example:
 ```python
